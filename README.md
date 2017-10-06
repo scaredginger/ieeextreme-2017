@@ -1,3 +1,3 @@
-#IEEExtreme Competition
+# IEEExtreme Competition
 
-##Good luck, have fun, everyone!
+## Good luck, have fun, everyone!
