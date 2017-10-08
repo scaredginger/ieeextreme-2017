@@ -19,9 +19,8 @@ int main() {
         //add the larger of the pair to the total group which can be formed.
 	int compliment;
 	int current;
-	int sum = 0;
+	int sum = remainders[0] > 0 ? 1 : 0;
 	int end = (divisor/2);
-        sum += remainders[0];
 	for (int i = 1; i <= end; i++) {
 		if (i == divisor-i && remainders[i] <= 1) {
 			sum += remainders[i];
