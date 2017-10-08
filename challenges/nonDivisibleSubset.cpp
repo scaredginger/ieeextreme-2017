@@ -23,15 +23,16 @@ int main() {
 	int end = (divisor/2);
         sum += remainders[0];
 	for (int i = 1; i <= end; i++) {
-		current = remainders[i];
-		compliment = remainders[divisor-i];
-        	if(current == compliment) {
-                	sum += 0; //if there is a halve it musn't be counted.
-            	}
-		else if(current > compliment) {
-			sum += current;
-		} else {
-			sum += compliment;
+		if (i == divisor-i && remainders[i] < 1) {
+			sum += remainders[i];
+		} else if (i != divisor-i) {
+			current = remainders[i];
+			compliment = remainders[divisor-i];
+			if(current > compliment) {
+				sum += current;
+			} else {
+				sum += compliment;
+			}
 		}
 	}
 	cout << sum;
