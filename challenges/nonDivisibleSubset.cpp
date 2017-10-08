@@ -21,7 +21,9 @@ int main() {
 	int current;
 	int sum = 0;
 	int end = (divisor/2);
-        sum += remainders[0];
+	if(remainders[0] > 0) {
+		sum = 1;
+	}
 	for (int i = 1; i <= end; i++) {
 		if (i == divisor-i && remainders[i] <= 1) {
 			sum += remainders[i];
@@ -34,6 +36,9 @@ int main() {
 				sum += compliment;
 			}
 		}
+	}
+	if(divisor%2 == 0) {
+		sum += 1;
 	}
 	cout << sum;
 	return 0;
