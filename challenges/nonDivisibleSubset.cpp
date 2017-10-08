@@ -23,7 +23,7 @@ int main() {
 	int end = (divisor/2);
         sum += remainders[0];
 	for (int i = 1; i <= end; i++) {
-		if (i == divisor-i && remainders[i] < 1) {
+		if (i == divisor-i && remainders[i] <= 1) {
 			sum += remainders[i];
 		} else if (i != divisor-i) {
 			current = remainders[i];
